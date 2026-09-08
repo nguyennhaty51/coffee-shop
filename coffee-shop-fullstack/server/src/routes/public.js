@@ -5,12 +5,6 @@ import { suggestFromAI } from "../ai/suggest.js";
 
 const router = Router();
 
-// ============================================================
-// KHÔNG yêu cầu đăng nhập — dành cho khách hàng quét mã QR dán
-// tại bàn để xem thực đơn / đặt món (đúng vai trò "Khách hàng"
-// trong báo cáo: chỉ xem món, giá, khuyến mãi, không cần tài khoản).
-// ============================================================
-
 router.get("/menu", (req, res) => {
   const categories = db.prepare("SELECT id, name FROM categories").all();
   const menu = db
