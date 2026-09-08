@@ -1,8 +1,3 @@
-// Trợ lý AI gợi ý đồ uống. Gọi Google Gemini API bằng API key lưu ở SERVER
-// (server/.env → GEMINI_API_KEY), KHÔNG bao giờ gửi key về trình duyệt.
-// Nếu chưa cấu hình GEMINI_API_KEY, hệ thống tự chuyển sang "fallback": một bộ
-// gợi ý dựa trên luật đơn giản để trợ lý vẫn hoạt động khi chưa có API key.
-
 const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-1.5-flash";
 
 function buildSystemPrompt(menu) {
